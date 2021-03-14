@@ -1,0 +1,28 @@
+<h1> Movies with Similar Directors</h1>
+<h2> <%= Movie:= movie.title %></h2>
+<h2> <%= Director:= movie.director %></h2>
+
+<table class="table table-striped col-md-12" id="movies">
+  <thead>
+    <tr>
+      <th>Movie Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td>
+          <%= movie.title %>
+        </td>
+        <td>
+          <%= movie.rating %>
+        </td>
+        <td>
+          <%= movie.release_date %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
